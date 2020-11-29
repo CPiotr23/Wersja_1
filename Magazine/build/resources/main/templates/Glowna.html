@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Magazyn</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+        h1 {
+            color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Magazyn</h1>
+<form th:action="@{/wpisz}">
+    <p><input type="submit" value="Przejdź do dodawania"></p>
+</form>
+<tr th:each="listaLaptopow: ${lista}">
+    <td th:text="${listaLaptopow.getModel()}"></td>
+    <td th:text="${listaLaptopow.getMarka()}"></td>
+</tr>
+<form th:action="@{/}" th:object="${nowyLaptop}" method="post">
+    <p>Model: <input type="text" th:field="*{model}"></p>
+    <p>Marka: <input type="text" th:field="*{marka}"></p>
+    <p><input type="submit" value="Dodawanie do listy"></p>
+</form>
+<section class="my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2>Dodawanie pliku</h2>
+                <p th:text="${wiadomosc}" th:if="${wiadomosc ne null}" class="alert alert-primary"></p>
+                <form method="post" th:action="@{/}" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="file" name="file" class="form-control-file">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Upload File</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

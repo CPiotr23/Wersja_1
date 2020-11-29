@@ -1,0 +1,2 @@
+com/example/Magazine/MagazineApplicationTests.java
+ com.example.Magazine.MagazineApplicationTests

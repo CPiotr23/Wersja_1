@@ -1,0 +1,8 @@
+com/example/Magazine/Obiekt.java
+ com.example.Magazine.Obiekt
+com/example/Magazine/MagazineApplication.java
+ com.example.Magazine.MagazineApplication
+com/example/Magazine/Variables.java
+ com.example.Magazine.Variables
+com/example/Magazine/Start.java
+ com.example.Magazine.Start

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dodawanie</title>
+    <style>
+        body {
+            background-color: #363b3f;
+        }
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<h1>Dodawanie</h1>
+<form th:action="@{/wpisz}" th:object="${variables}" method="post">
+    <p>A: <input type="text" th:field="*{a}"</p>
+    <p>B: <input type="text" th:field="*{b}"</p>
+    <p><input type="submit" value="Wypisanie w intellij"></p>
+</form>
+<form method="get" action="/">
+    <button type="submit">Continue</button>
+</form>
+</body>
+</html>
